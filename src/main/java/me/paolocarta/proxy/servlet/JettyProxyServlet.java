@@ -30,6 +30,7 @@ public class JettyProxyServlet extends ProxyServlet {
         try {
         	placesUrl = System.getProperty(TARGET_URL, placesUrl);
         } catch (SecurityException e) {
+        	e.printStackTrace();
         }
         if (null == placesUrl) {
         	placesUrl = "https://www.google.com";
